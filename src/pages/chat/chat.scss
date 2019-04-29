@@ -1,0 +1,110 @@
+page-chat {
+
+    .scroll-content{
+        padding-bottom: 16px!important
+    }
+
+    .avatar{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+
+    .mensajesContenedor{
+        display: flex;
+        flex-direction: column;
+        max-height: 91%;
+        overflow: scroll;
+        scroll-behavior: smooth ;        
+    }
+
+    .mensajesContenedor.foco{
+        max-height: 89%;
+    }
+
+    .mensaje{
+        font-size: 15px;
+        background-color: #d9d9dc;
+        display: block;
+        max-width: 75%;
+        padding: 10px 15px;
+        border-radius: 11px;
+        width: fit-content;
+        margin: 4px 0;
+    }
+
+    .mensaje.me{
+        position: relative;
+        padding: 15px 10px 10px 10px;
+        align-self: flex-end;
+        background-color: #548fff;
+        color: #ffffff;
+        border-bottom-right-radius: 0px;
+
+    }
+
+    .mensaje.friend:first-of-type{
+        margin-top: 10px;
+    }
+
+    .mensaje.friend{
+        align-self: flex-start;
+        background-color: #ffffff;
+        color: #548fff;
+        border: 1px solid #708ee6;
+        border-bottom-left-radius: 0px;
+    }
+
+    .mensaje p{
+        margin: 0;
+        display: inline-block;
+    }
+
+    .mensaje.me .checks{
+        float: right;
+        margin: 0 0 0 20px;
+    }
+
+    .check{
+        font-size: 18px;
+        font-weight: 900;
+
+    }
+
+    .cajaInput{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .input{
+        box-shadow: 0px 0px 1px 0px #848484;
+        background-color: rgb(245, 245, 245);
+        padding: 0 15px;
+        border-radius: 20px;
+        margin-right: 7px;
+    }
+
+    .text-input {
+        margin: 8px 8px 8px 0;
+        height: 18px;
+    }
+
+    .enviar{
+        border-radius: 50%;
+        background-color: #708ee6;
+        width: 45px;
+        height: 45px;
+    }
+
+   
+
+}
+.desaparecer{
+    display: none;
+}

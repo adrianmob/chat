@@ -1,0 +1,27 @@
+
+<ion-header>
+  
+</ion-header>
+
+<ion-content padding>
+
+    
+    <h1 text-center class="titulo">Bienvenido</h1>
+    
+    <div class="logo">
+        <img src="../../assets/imgs/icon.png" alt="Logo">
+    </div>
+    
+    <ion-item class="correo">
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]='email' type='email' autocomplete=false></ion-input>
+    </ion-item>
+  
+    <ion-item class="pass">
+        <ion-label floating >Contraseña</ion-label>
+        <ion-input [(ngModel)]='pass' type='password' autocomplete=false clearInput=true></ion-input>
+    </ion-item>
+  
+    <button ion-button round class="boton" (click)='entrar()'>Entrar</button>
+
+</ion-content>

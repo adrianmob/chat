@@ -1,11 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Perfil
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-slides class='slides'>
+    <ion-slide *ngFor='let foto of fotos' class="slide">
+      <img src={{foto.url}} alt="foto">
+      <button *ngIf='foto.ocupado' class="boton" ion-button round outline>Seleccionada</button>
+      <button *ngIf='!foto.ocupado' class="boton" (tap)='seleccionar(foto.key, foto.url)' ion-button round outline>Seleccionar</button>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item class="nombre">
+      <ion-label floating >Nombre</ion-label>
+      <ion-input [(ngModel)]='name' type='text'></ion-input>
+  </ion-item>
+
+  <button class="boton nombre" (tap)='cambiarName()' ion-button round >Cambiar nombre</button>
+
+  <ion-fab bottom right >
+      <button ion-fab (tap)='salir()'><ion-icon name="log-out"></ion-icon></button>
+  </ion-fab>   
+
 
 </ion-content>
